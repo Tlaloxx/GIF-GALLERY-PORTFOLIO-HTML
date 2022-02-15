@@ -1,0 +1,40 @@
+<!-- https://www.youtube.com/watch?v=4sF1Kifpaqs&list=PLPl81lqbj-4J-gfAERGDCdOQtVgRhSvIT&index=6 --> 
+<!DOCTYPE html>
+<html lang="es">
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+</head>
+
+<body>
+
+    <div id="app" style="background-color:aquamarine;">
+        <h1>{{ message }}</h1>
+        <input type="text" v-model="nuevaFruta" @keyup.enter="agregarFruta">
+        <button v-on:click="agregarFruta" style="background-color:aqua;"> Agregar Fruta </button>
+        <ol>
+            <li v-for="fruta of frutas">{{fruta.nombre}}
+                <input type="number" v-model.number="fruta.cantidad">
+                <span v-if="fruta.cantidad === 0"> sin stock </span>
+                <button v-on:click="fruta.cantidad = fruta.cantidad + 1"> + </button>
+            </li>
+        </ol>
+        <h4>Total: {{sumarFrutas}}</h4>
+        <img src="assets/gatito.jpg">
+    </div>
+
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
+
