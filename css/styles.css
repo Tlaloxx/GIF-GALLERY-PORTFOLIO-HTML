@@ -1,0 +1,109 @@
+/* -----------------AQUI COMIENZA EL NUEVO CODIGO------------------------ */
+
+video {
+    background-color: gray;
+}
+.port-content {
+    width: 100vw;
+    max-width: 1800px;
+    margin: auto;
+    /* background-color: aqua; */
+}
+
+header {
+    padding: 40px;
+    text-decoration: none;
+}
+
+.header-content {
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+    font-weight: 500;
+}
+
+header .header-content p {
+    color: #9b9b9b;
+    font-size: 1.2rem;
+}
+
+header .header-categories, header a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    margin: 10px 20px;
+    text-shadow: 1rem;
+    font-weight: 800;
+    transition: 0.5s;
+}
+
+header .header-categories{
+    font-size: 1.5rem;
+}
+
+header a:hover{
+    transform: scale(1.35);
+    transition: 0.5s;
+    color: #9bf3d0;
+}
+
+header .header-categories,
+a.active {
+    color: #9bf3d0;
+}
+
+/* ----------------IMAGENES DEL GRID------------- */
+
+.grid {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s linear 1s;
+}
+
+.grid.images-load {
+    opacity: 1;
+}
+
+.grid .item {
+    position: absolute;
+    display: block;
+    padding: 0;
+    margin: 1px;
+    width: calc(33.33% - 3px);
+}
+
+.grid .item-content {
+    position: relative;
+}
+
+.grid .item .item-content video, .grid .item .item-content img {
+    width: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 992px){
+    .grid .item {
+        width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 600px){
+    .grid .item {
+        width: calc(100% - 10px);
+    }
+}
+
+/* ---------------- HOVER DE VIDEO EN GRID ------------------ */
+
+.static {
+    position:absolute;
+    /* background: white; */
+  }
+  
+  .static:hover {
+    opacity:0;
+  }
