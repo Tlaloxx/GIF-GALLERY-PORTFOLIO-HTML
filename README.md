@@ -1,2 +1,1 @@
-# vue_pruebas-
-pruebas de vue, git &amp; github 
+# Galeria con formato GIF para optimizar el renderizado
